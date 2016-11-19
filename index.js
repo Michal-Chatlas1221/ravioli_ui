@@ -2,13 +2,10 @@ import App from './src/components/App';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
-import colors from './src/reducers/colors';
-import charts from './src/reducers/charts';
 import { connect, Provider } from 'react-redux';
 
 const store = createStore(combineReducers ({
-    colors,
-    charts
+//    TODO reducers
 }));
 
 const addLogging = store => {
