@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { connect, Provider } from 'react-redux';
+import './src/styles/style.scss';
 
 const store = createStore(combineReducers ({
     dummy: (state = {}, action) => state

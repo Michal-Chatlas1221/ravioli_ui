@@ -2,6 +2,8 @@ import React from 'react';
 
 export default () => (
     <header>
-        To je Góra
+        <div>
+            <h1>Ravioli</h1>
+        </div>
     </header>
 );
