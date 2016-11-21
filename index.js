@@ -6,9 +6,10 @@ import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { connect, Provider } from 'react-redux';
 import './src/styles/style.scss';
+import user from './src/reducers/user';
 
 const store = createStore(combineReducers ({
-    dummy: (state = {}, action) => state
+    user
 }));
 
 const addLogging = store => {
