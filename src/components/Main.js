@@ -1,4 +1,5 @@
 import React from 'react';
+import SignupFormContainer from '../containers/SignupFormContainer.js';
 
 export default class Main extends React.Component {
     render() {
@@ -13,16 +14,9 @@ export default class Main extends React.Component {
                     </p>
                 </div>
                 <div>
-                    <form>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email"/>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password"/>
-                        <button type="button">Log in/Register</button>
-                    </form>
+                  <SignupFormContainer />
                 </div>
             </div>
         );
     }
 };
-
