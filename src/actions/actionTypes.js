@@ -4,3 +4,6 @@ export const INVALID_CREDENTIALS = "AUTH/INVALID_CREDENTIALS"
 export const API_ERROR_500       = "API_ERROR/500"
 export const API_ERROR_404       = "API_ERROR/404"
 export const API_ERROR_403       = "API_ERROR/403"
+
+export const LOGOUT   			 = "LOGOUT/SUCCESSFUL_LOGOUT"
+export const LOGOUT_ERROR		 = "LOGOUT/LOGOUT_ERROR"
