@@ -1,5 +1,6 @@
 import React from 'react'
-import SignupFormContainer from '../containers/SignUpFormContainer'
+import SignupFormContainer from '../containers/SignupFormContainer'
+import LogoutBarContainer from '../containers/LogoutBarContainer'
 
 export default class Main extends React.Component {
   render() {
@@ -16,6 +17,7 @@ export default class Main extends React.Component {
         </div>
         <div>
           <SignupFormContainer />
+          <LogoutBarContainer />
         </div>
       </div>
     )

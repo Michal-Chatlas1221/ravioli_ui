@@ -4,7 +4,6 @@ class SignupForm extends React.Component {
   submit(event) {
     const form = new FormData(event.target);
     this.props.submitSignupForm(form);
-
     event.preventDefault();
   }
   render() {
