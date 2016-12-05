@@ -7,13 +7,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { connect, Provider } from 'react-redux';
 import './src/styles/style.scss';
 import auth from './src/reducers/authReducer';
-import logout from './src/reducers/logoutReducer';
 import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger'
 
 const reducer = combineReducers ({
   auth,
-  logout,
 });
 
 const store = createStore(

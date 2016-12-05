@@ -4,8 +4,8 @@ import LogoutBar from '../components/LogoutBar.jsx'
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: (username) => {
-      dispatch(logout(username))
+    logout: (user) => {
+      dispatch(logout(user))
     }
   }
 }

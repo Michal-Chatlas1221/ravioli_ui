@@ -4,10 +4,13 @@ import LogoutBarContainer from '../containers/LogoutBarContainer'
 
 export default class Main extends React.Component {
   render() {
+    console.log("props", this.props);
+    console.log(this.props.auth.currentUser)
+
     return (
       <div>
         <div>
-          <h2>Ravioli is a state of the art distibuted computing system</h2>
+          <h2> Ravioli is a state of the art distibuted computing system</h2>
           <p>
             Ravioli allows you to use our pool of associated websites and blogs for your
             calculations without the need for own resources. We provide you everything, and the computing
@@ -16,8 +19,9 @@ export default class Main extends React.Component {
           </p>
         </div>
         <div>
-          <SignupFormContainer />
-          <LogoutBarContainer />
+          {this.props.auth.currentUser ?
+            <LogoutBarContainer /> :
+            <SignupFormContainer /> }
         </div>
       </div>
     )
