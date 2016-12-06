@@ -1,9 +1,7 @@
 import React from 'react';
 
-class LogoutBar extends React.Component {
-  logoutClick(){
-    console.log("logout")
-    console.log(this.props)
+class LogoutComponent extends React.Component {
+  logoutClick() {
     this.props.logout(this.props.currentUser);
   }
   render() {
@@ -16,4 +14,4 @@ class LogoutBar extends React.Component {
   }
 }
 
-export default LogoutBar;
+export default LogoutComponent;

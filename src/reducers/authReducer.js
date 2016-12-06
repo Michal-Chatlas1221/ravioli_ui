@@ -2,7 +2,6 @@ import {
   RECEIVE_LOGGED_USER,
   RECEIVE_LOGIN_ERROR,
   LOGOUT,
-  LOGOUT_ERROR,
 } from '../actions/actionTypes'
 
 const initialState = {
@@ -18,11 +17,7 @@ const auth = (state = initialState, action) => {
     case RECEIVE_LOGIN_ERROR:
       return Object.assign({}, state, {error: true})
     case LOGOUT:
-    console.log("state: ", state)
       return Object.assign({}, state, {currentUser: null}, {view: 'notLogged'})
-
-    case LOGOUT_ERROR:
-      return Object.assign({}, state, {error: true}, {view: 'logged'})
     default:
       return state
   }

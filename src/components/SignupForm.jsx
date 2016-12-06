@@ -3,6 +3,7 @@ import React from 'react';
 class SignupForm extends React.Component {
   submit(event) {
     const form = new FormData(event.target);
+    console.log(this)
     this.props.submitSignupForm(form);
     event.preventDefault();
   }

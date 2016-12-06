@@ -1,6 +1,8 @@
 import React from 'react'
 import SignupFormContainer from '../containers/SignupFormContainer'
-import LogoutBarContainer from '../containers/LogoutBarContainer'
+import LogoutComponentContainer from '../containers/LogoutComponentContainer'
+import TaskCreatorContainer from '../containers/TaskCreatorContainer'
+import TasksListContainer from '../containers/TasksListContainer'
 
 export default class Main extends React.Component {
   render() {
@@ -19,10 +21,26 @@ export default class Main extends React.Component {
           </p>
         </div>
         <div>
-          {this.props.auth.currentUser ?
-            <LogoutBarContainer /> :
-            <SignupFormContainer /> }
+          {
+            this.props.auth.currentUser ?
+              <LogoutComponentContainer /> :
+              <SignupFormContainer /> 
+          }
         </div>
+           { 
+            this.props.auth.currentUser ?
+              <div>
+               <TaskCreatorContainer />
+              </div> :
+              null
+           }
+           { 
+            this.props.auth.currentUser ?
+              <div>
+               <TasksListContainer />
+              </div> :
+              null
+           }
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { logout } from '../actions/logoutAction'
-import LogoutBar from '../components/LogoutBar.jsx'
+import LogoutComponent from '../components/LogoutComponent.jsx'
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -10,9 +10,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const LogoutBarContainer = connect(
+const LogoutComponentContainer = connect(
   state => state.auth,
   mapDispatchToProps
-)(LogoutBar)
+)(LogoutComponent)
 
-export default LogoutBarContainer
+export default LogoutComponentContainer
