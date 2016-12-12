@@ -6,4 +6,5 @@ export const API_ERROR_404       = "API_ERROR/404"
 export const API_ERROR_403       = "API_ERROR/403"
 
 export const LOGOUT   			 = "LOGOUT/SUCCESSFUL_LOGOUT"
-export const LOGOUT_ERROR		 = "LOGOUT/LOGOUT_ERROR"
+
+export const SUBMIT_NEW_TASK	 = "CREATE_TASK/SUBMIT_NEW_TASK"

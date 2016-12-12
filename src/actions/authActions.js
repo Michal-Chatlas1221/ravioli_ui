@@ -22,12 +22,12 @@ import customHeaderFetch from '../helpers/fetch'
 
 export const submitSignupForm = form =>
   dispatch => {
-    fetch("http://localhost:4000/api/sign_in", {
+    fetch("http://localhost:4000/api/sign_up", {
       method: "POST",
       body: form
     })
     .then(
-        response => response.json().then(json => 
+        response => response.json().then(json =>
           dispatch(
             response.status === 200 ?
              receiveLoggedUser(json) :
