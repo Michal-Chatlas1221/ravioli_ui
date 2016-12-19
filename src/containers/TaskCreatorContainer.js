@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
-import { taskCreateAction } from '../actions/taskCreatorActions'
+import { createAndSaveTask } from '../actions/taskCreatorActions'
 import TaskCreator from '../components/TaskCreator'
 
 const TaskCreatorContainer = connect(
-	(e) => ({}),
+	(state) => ({ token: state.auth.currentUser.token }),
 	dispatch => ({
-		submitTaskForm: (data) => dispatch(taskCreateAction(data))
+		submitTaskForm: (form, token) => { dispatch(createAndSaveTask(form, token)) }
 	})
 )(TaskCreator)
 
