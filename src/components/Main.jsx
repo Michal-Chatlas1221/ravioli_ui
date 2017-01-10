@@ -28,11 +28,17 @@ export default class Main extends React.Component {
           }
         </div>
            { 
+            // !this.props.auth.currentUser ? null :
+            //   this.props.settings.displayForm ?
+            //     <div>
+            //      <TaskCreatorContainer />
+            //     </div> :
+            //     null
             this.props.auth.currentUser ?
-              <div>
-               <TaskCreatorContainer />
-              </div> :
-              null
+                <div>
+                 <TaskCreatorContainer />
+                </div> :
+                null
            }
            { 
             this.props.auth.currentUser ?

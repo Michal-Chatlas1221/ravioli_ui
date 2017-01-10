@@ -1,6 +1,11 @@
 import React from 'react';
 
 class TasksList extends React.Component {
+
+  componentWillMount() {
+    this.props.fetchTasks(this.props.token)
+  } //b4 1st r3nd3r
+
   taskClick(id) {
     //do something with task
   }
@@ -11,9 +16,9 @@ class TasksList extends React.Component {
         {this.props.tasks.map(function(task, id) {
           return (
             <div key={id}>
-              <p>{task.taskName}</p>
-              <p>{task.data}</p>
-              <p>{task.file}</p>
+              <p>{task.type}</p>
+              <p>{task.input}</p>
+              <p>{task.script_file}</p>
             </div>
           );
         })}

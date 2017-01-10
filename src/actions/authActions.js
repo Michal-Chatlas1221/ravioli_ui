@@ -31,7 +31,13 @@ const recieveInvalidCredentials = () => ({
   type: INVALID_CREDENTIALS
 })
 
-const receiveLoggedUser = response => ({
-  response,
-  type: RECEIVE_LOGGED_USER
-});
+const receiveLoggedUser = response => {
+  
+  localStorage.setItem('email', response.email)
+  localStorage.setItem('token', response.token)
+
+  return {
+    response,
+    type: RECEIVE_LOGGED_USER
+  }
+};

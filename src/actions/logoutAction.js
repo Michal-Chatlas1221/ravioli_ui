@@ -2,10 +2,12 @@ import {
   LOGOUT,
 } from './actionTypes'
 
-export const logout = (user) => ({
-  type: LOGOUT
-})
+export const logout = (user) => {
 
-const successfulLogout = () => ({
-  type: LOGOUT
-});
+	localStorage.removeItem('email')
+	localStorage.removeItem('token')
+
+	return {
+  	type: LOGOUT
+	}
+};

@@ -8,3 +8,5 @@ export const API_ERROR_403       = "API_ERROR/403"
 export const LOGOUT   			 = "LOGOUT/SUCCESSFUL_LOGOUT"
 
 export const SUBMIT_NEW_TASK	 = "CREATE_TASK/SUBMIT_NEW_TASK"
+
+export const TASKS_RECEIVED		 = "GET_TASKS/RECEIVE_LIST"

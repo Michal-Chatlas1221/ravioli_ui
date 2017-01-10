@@ -4,10 +4,16 @@ import {
   LOGOUT,
 } from '../actions/actionTypes'
 
+const isDataSaved = () => localStorage.getItem('email') && localStorage.getItem('token')
+const savedData = () => ({
+  email: localStorage.getItem('email'),
+  token: localStorage.getItem('token')
+})
+
 const initialState = {
-  currentUser: null,
+  currentUser: isDataSaved() ? savedData() : null,
   error: false,
-  view: 'notLogged'
+  view: isDataSaved() ? 'logged' : 'notLogged'
 }
 
 const auth = (state = initialState, action) => {
