@@ -8,6 +8,6 @@ export const logout = (user) => {
 	localStorage.removeItem('token')
 
 	return {
-  	type: LOGOUT
+  		type: LOGOUT
 	}
 };

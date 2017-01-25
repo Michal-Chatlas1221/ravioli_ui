@@ -4,10 +4,10 @@ class TasksList extends React.Component {
 
   componentWillMount() {
     this.props.fetchTasks(this.props.token)
-  } //b4 1st r3nd3r
+  } 
 
   taskClick(id) {
-    //do something with task
+    //task progress (%%%), wydzielone podtaski ze statusami
   }
   render() {
     console.log("taskListProps", this.props)

@@ -3,6 +3,7 @@ import SignupFormContainer from '../containers/SignupFormContainer'
 import LogoutComponentContainer from '../containers/LogoutComponentContainer'
 import TaskCreatorContainer from '../containers/TaskCreatorContainer'
 import TasksListContainer from '../containers/TasksListContainer'
+import ScriptForCalculationsContainer from '../containers/ScriptForCalculationsContainer'
 
 export default class Main extends React.Component {
   render() {
@@ -28,24 +29,13 @@ export default class Main extends React.Component {
           }
         </div>
            { 
-            // !this.props.auth.currentUser ? null :
-            //   this.props.settings.displayForm ?
-            //     <div>
-            //      <TaskCreatorContainer />
-            //     </div> :
-            //     null
             this.props.auth.currentUser ?
                 <div>
-                 <TaskCreatorContainer />
+                  <TaskCreatorContainer />
+                  <ScriptForCalculationsContainer />
+                  <TasksListContainer />           
                 </div> :
                 null
-           }
-           { 
-            this.props.auth.currentUser ?
-              <div>
-               <TasksListContainer />
-              </div> :
-              null
            }
       </div>
     )
