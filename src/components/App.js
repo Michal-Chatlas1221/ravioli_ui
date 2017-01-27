@@ -3,11 +3,11 @@ import Main from '../containers/MainContainer.js';
 
 class App extends React.Component {
 
-    render() {
-        return (
-            <Main />
-        );
-    }
+  render() {
+    return (
+      <Main />
+    );
+  }
 }
 
 export default App;

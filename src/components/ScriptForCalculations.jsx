@@ -65,7 +65,7 @@ class ScriptForCalculations extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="calculations-script-container">
         <p>If u wish to join our project and help other people/companies in their calculations just add simple
            script tag to head section of you website and visitors will now share their compute power while
            your page

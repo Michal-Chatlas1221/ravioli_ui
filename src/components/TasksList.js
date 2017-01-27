@@ -12,7 +12,7 @@ class TasksList extends React.Component {
   render() {
     console.log("taskListProps", this.props)
     return(
-      <div>
+      <div className="task-list-container">
         {this.props.tasks.map(function(task, id) {
           return (
             <div key={id}>

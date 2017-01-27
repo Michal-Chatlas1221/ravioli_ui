@@ -1,2 +1,109 @@
 @import "variables";
 @import "body";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+//body 
+body {
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  font-size: 14px;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+}
+
+//wrapper - header + main
+#wrapper {
+	max-width: $desktop-width;
+	margin: 0 auto;
+	padding: 0 10px;
+	h3,h4 {
+		font-weight: 300;
+	}
+}
+
+//HEADER 
+#header {
+  border-bottom: 2px solid $gray;
+  padding: 10px 0;
+  h1 {
+  	color: $blue;
+  }
+}
+
+button {
+	color: #fff;
+	background-color: $blue;
+	padding: 6px 10px;
+	border-radius: 2px;
+	border: 0px;
+	&:hover {
+		background-color: $darkblue;
+	}
+}
+//MAIN
+#app {
+	.info {
+		h3 {
+		}
+	}
+	.login {
+		padding: 20px 0;
+		font-size: 16px;
+		span {
+			padding-right: 20px;
+		}
+		.login-form {
+			label {
+				padding-right: 5px;
+			}
+			input {
+				margin-right: 10px;
+				padding: 4px 7px;
+				&:focus {
+					outline-color: $blue;
+				}
+			}
+			button {
+				margin-left: 20px;
+			}
+		}
+	}
+	.create-task-container {
+		label {
+			padding-right: 6px;
+		}
+		input {
+			padding: 2px 4px;
+		}
+		button {
+			font-size: 18px;
+			padding: 8px 12px;
+		}
+	}
+	.calculations-script-container {
+
+	}
+	.task-list-container {
+
+	}
+}
+
+//FOOTER
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $gray;
+  padding: 15px 10px;
+  .footer-text {
+  	margin: 0 auto;
+  	max-width: $desktop-width;
+  }
+}

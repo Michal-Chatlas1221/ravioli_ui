@@ -9,7 +9,7 @@ class SignupForm extends React.Component {
   }
   render() {
     return(
-      <form onSubmit={this.submit.bind(this)}>
+      <form onSubmit={this.submit.bind(this)} className="login-form">
         <label htmlFor="email">Email</label>
         <input name="email" type="email" id="email"/>
         <label htmlFor="password">Password</label>
