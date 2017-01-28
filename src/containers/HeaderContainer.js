@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Main from '../components/Main.jsx'
+import Header from '../components/Header.jsx'
 
 const mapStateToProps = (state) => {
   return {
@@ -7,8 +7,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const MainContainer = connect(
+const HeaderContainer = connect(
   mapStateToProps
-)(Main)
+)(Header)
 
-export default MainContainer
+export default HeaderContainer

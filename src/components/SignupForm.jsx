@@ -11,10 +11,10 @@ class SignupForm extends React.Component {
     return(
       <form onSubmit={this.submit.bind(this)} className="login-form">
         <label htmlFor="email">Email</label>
-        <input name="email" type="email" id="email"/>
+        <input name="email" type="email" id="email" size="15"/>
         <label htmlFor="password">Password</label>
-        <input name="password" type="password" id="password"/>
-        <button type="submit">
+        <input name="password" type="password" id="password" size="15"/>
+        <button type="submit" className="button">
           Log in/Register
         </button>
       </form>

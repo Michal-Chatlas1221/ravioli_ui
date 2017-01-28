@@ -12,13 +12,15 @@ class TasksList extends React.Component {
   render() {
     console.log("taskListProps", this.props)
     return(
-      <div className="task-list-container">
+      <div id="tasks-list">
+        <p className="description">Below you can see list of tasks created by you with 
+          provided type, dataset and url of divide server.</p>
         {this.props.tasks.map(function(task, id) {
           return (
-            <div key={id}>
-              <p>{task.type}</p>
-              <p>{task.input}</p>
-              <p>{task.script_file}</p>
+            <div key={id} className="task">
+              <p>Task type: {task.type}</p>
+              <p>Task input: {task.input}</p>
+              <p>Divide url: {task.divide_server_url}</p>
             </div>
           );
         })}

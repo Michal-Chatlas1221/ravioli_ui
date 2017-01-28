@@ -6,9 +6,9 @@ class LogoutComponent extends React.Component {
   }
   render() {
     return(
-      <div>
-        <span>Hello {this.props.currentUser.email}!</span>
-        <button onClick={this.logoutClick.bind(this)}>Logout</button>
+      <div className="logout">
+        <span>Hello {this.props.currentUser.email}</span>
+        <button onClick={this.logoutClick.bind(this)} className="button">Logout</button>
       </div>
     );
   }

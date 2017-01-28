@@ -9,7 +9,6 @@ class TaskCreator extends React.Component {
   }
   submit(event) {
     const form = new FormData(event.target);
-    console.log("formData", form)
     this.props.submitTaskForm(form, this.props.token);
     event.preventDefault();
   }
@@ -17,7 +16,10 @@ class TaskCreator extends React.Component {
   render() {
     return(
       <div className="create-task-container">
-        <form onSubmit={this.submit.bind(this)} id="tasks-form">
+        <p className="description">If you have some serious math to do but lack computing power, do not worry!
+          Just fill the form below and let us handle it for you.
+        </p>
+        <form onSubmit={this.submit.bind(this)} id="create-task">
           <p>
             <label htmlFor="job[name]">Job name</label>
             <input name="job[name]" type="text" id="taskName" ref={(input) => {this.state.taskName = input}}/>
@@ -33,7 +35,7 @@ class TaskCreator extends React.Component {
             <label htmlFor="job[input]">Input data set</label>
             <input name="job[input]" type="text" id="input" ref={(input) => {this.state.input = input}}/>
           </p>  
-          <p>
+          <p className="file-input">
             <label htmlFor="job[script_file]">Script File</label>
             <input name="job[script_file]" type="file" id="script_file" ref={(input) => {this.state.script_file = input}}/>
           </p>
@@ -41,9 +43,11 @@ class TaskCreator extends React.Component {
             <label htmlFor="job[divide_server_url]">Divide server url</label>
             <input name="job[divide_server_url]" type="text" id="divide-server-url" ref={(input) => {this.state.divide_server_url = input}}/>
           </p>
-          <button type="submit">
-            Submit task
-          </button>
+          <p className="button-holder">
+            <button type="submit" className="button">
+              Submit a job
+            </button>
+          </p>
         </form>
       </div>
     );

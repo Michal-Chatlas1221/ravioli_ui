@@ -1,5 +1,5 @@
 import App from './src/components/App';
-import Header from './src/components/Header';
+import Header from './src/components/Header.jsx';
 import Footer from './src/components/Footer';
 import ReactDOM from 'react-dom';
 import React from 'react';
@@ -31,8 +31,4 @@ ReactDOM.render((
 
 ReactDOM.render((
         <Footer />
-), document.getElementById('footer'));
-
-ReactDOM.render((
-    <Header />
-), document.getElementById('header'));
+    ), document.getElementById('footer'));
