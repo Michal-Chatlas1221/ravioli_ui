@@ -1,9 +1,5 @@
 # ravioli_ui
 
-# TODO
-  - service api (adding task)
-  - custom fetch header (with token)
-  - file upload
-  - maintain token after refresh
+# TODO (?)
   - router
   - task view: progress
