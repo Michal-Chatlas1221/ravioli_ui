@@ -4,23 +4,27 @@ class TasksList extends React.Component {
 
   componentWillMount() {
     this.props.fetchTasks(this.props.token)
-  } 
+  }
 
-  taskClick(id) {
-    //task progress (%%%), wydzielone podtaski ze statusami
+  jobClick(id) {
+    //job progress (%%%), wydzielone podjobi ze statusami
   }
   render() {
-    console.log("taskListProps", this.props)
+    console.log("jobListProps", this.props)
     return(
       <div id="tasks-list">
-        <p className="description">Below you can see list of tasks created by you with 
-          provided type, dataset and url of divide server.</p>
-        {this.props.tasks.map(function(task, id) {
+        <p className="description">
+          Below you can see list of jobs created by you with details.
+        </p>
+        {this.props.tasks.map(function(job, id) {
           return (
             <div key={id} className="task">
-              <p>Task type: {task.type}</p>
-              <p>Task input: {task.input}</p>
-              <p>Divide url: {task.divide_server_url}</p>
+              <p>Name: {job.name}</p>
+              <p>Description: {job.description}</p>
+              <p>Job type: {job.type}</p>
+              <p>Job input: {job.input}</p>
+              <p>Divide url: {job.divide_server_url}</p>
+              <p>Progress: {job.progress}</p>
             </div>
           );
         })}

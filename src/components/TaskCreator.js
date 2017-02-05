@@ -25,16 +25,25 @@ class TaskCreator extends React.Component {
             <input name="job[name]" type="text" id="taskName" ref={(input) => {this.state.taskName = input}}/>
           </p>
           <p>
-            <label htmlFor="job[type]">Type</label>
-            <select name="job[type]" id="type" ref={(select) => {this.state.type = select}}>
+            <label htmlFor="job[division_type]">Division Type</label>
+            <select name="job[division_type]" id="type" ref={(select) => {this.state.type = select}}>
               <option value="pi">Pi</option>
               <option value="matrix">Matrix multiplication</option>
+              <option value="repeat_10000">Repeat_1000</option>
              </select>
+          </p>
+          <p>
+            <label htmlFor="job[aggregation_type]">Aggregation Type</label>
+            <select name="job[aggregation_type]" id="type" ref={(select) => {this.state.type = select}}>
+              <option value="pi">Pi</option>
+              <option value="matrix">Matrix multiplication</option>
+              <option value="list">List</option>
+            </select>
           </p>
           <p>
             <label htmlFor="job[input]">Input data set</label>
             <input name="job[input]" type="text" id="input" ref={(input) => {this.state.input = input}}/>
-          </p>  
+          </p>
           <p className="file-input">
             <label htmlFor="job[script_file]">Script File</label>
             <input name="job[script_file]" type="file" id="script_file" ref={(input) => {this.state.script_file = input}}/>
@@ -42,6 +51,14 @@ class TaskCreator extends React.Component {
           <p>
             <label htmlFor="job[divide_server_url]">Divide server url</label>
             <input name="job[divide_server_url]" type="text" id="divide-server-url" ref={(input) => {this.state.divide_server_url = input}}/>
+          </p>
+          <p>
+            <label htmlFor="job[randomized_results]">Randomized results?</label>
+            <input name="job[randomized_results]" type="checkbox" id="randomized_results" ref={(input) => {this.state.divide_server_url = input}}/>
+          </p>
+          <p>
+            <label htmlFor="job[replication_rate]">Replication rate</label>
+            <input name="job[replication_rate]" type="text" id="replication_rate" ref={(input) => {this.state.divide_server_url = input}}/>
           </p>
           <p className="button-holder">
             <button type="submit" className="button">
