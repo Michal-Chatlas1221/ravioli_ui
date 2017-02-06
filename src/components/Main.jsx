@@ -12,22 +12,22 @@ export default class Main extends React.Component {
       <div id="wrapper">
         <Header />
         {
-          this.props.auth.currentUser ? 
+          this.props.auth.currentUser ?
           null :
           <div className="info content">
-            <h3>Ravioli is a project that allows you to make use of other people computing
+            <h3>Povocop is a project that allows you to make use of other people computing
               power coming from their web browsers. This system allows you to use our pool of associated
               websites and blogs for your calculations. We provide you everything! To make a job request just login and fill
               the short form.
             </h3>
-          </div> 
-        }        
-        { 
+          </div>
+        }
+        {
           this.props.auth.currentUser ?
             <div className="tasks-management">
               <TaskCreatorContainer />
-              <TasksListContainer />  
-              <ScriptForCalculationsContainer />         
+              <TasksListContainer />
+              <ScriptForCalculationsContainer />
             </div> :
             null
         }

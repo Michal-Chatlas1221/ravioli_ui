@@ -30,10 +30,16 @@ class TasksList extends React.Component {
                 <p>Results randomization: {job.randomized_results}</p>
                 <p>Replication rate: {job.replication_rate}</p>
                 <p style={{ width: job.progress*100 + '%' }} className="job-progress"></p>
-                <p className="job-progress-text">{job.progress}% completed</p>
+                <p className="job-progress-text">{job.progress * 100}% completed</p>
                 {
-                  job.progress === 1 ? 
-                    <p>Results: {job.results}</p>  :
+                  job.progress === 1 ?
+                    <div>
+                    Results:
+                    <textarea className="results">
+                      {job.result}
+                    </textarea>
+                      <p>Duration: {job.duration} ms</p>
+                    </div> :
                     null
                 }
               </details>

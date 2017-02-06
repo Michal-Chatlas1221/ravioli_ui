@@ -29,7 +29,7 @@ class TaskCreator extends React.Component {
             <select name="job[division_type]" id="division_type" required ref={(select) => {this.state.type = select}}>
               <option value="pi">Pi</option>
               <option value="matrix">Matrix multiplication</option>
-              <option value="repeat_10000">Repeat_1000</option>
+              <option value="repeat_500">Repeat_500</option>
              </select>
           </p>
           <p>
@@ -50,7 +50,7 @@ class TaskCreator extends React.Component {
           </p>
           <p>
             <label htmlFor="job[divide_server_url]">Divide server url</label>
-            <input name="job[divide_server_url]" type="text" required id="divide_server_url" ref={(input) => {this.state.divide_server_url = input}}/>
+            <input name="job[divide_server_url]" type="text" id="divide_server_url" ref={(input) => {this.state.divide_server_url = input}}/>
           </p>
           <p>
             <label htmlFor="job[randomized_results]">Randomized results?</label>
