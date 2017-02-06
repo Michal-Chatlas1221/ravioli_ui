@@ -65,7 +65,7 @@ class ScriptForCalculations extends React.Component {
 
   render() {
     return(
-      <div className="calculations-script-container" id="join-the-project">
+      <div className="calculations-script-container" id="join_the_project">
         <div className="content">
           <p className="description">We highly encourage you to join our project and help other people/companies with their calculations. Feel free to
             add simple script tag to head section of you website. Now guests will share their compute power while browsing your page.
@@ -81,7 +81,7 @@ class ScriptForCalculations extends React.Component {
              checked={this.state.selectedBannerOption==='yes'} onChange={this.onBannerOptionChanged.bind(this)} />Yes</label>
             </p>
             <p>
-              <label>Which teachnology should the script use?</label>
+              <label>What technology should the script use?</label>
             </p>
             <p>
             <label><input type="radio" name="calcType" value="workers"

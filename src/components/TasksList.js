@@ -12,19 +12,31 @@ class TasksList extends React.Component {
   render() {
     console.log("jobListProps", this.props)
     return(
-      <div id="tasks-list">
+      <div id="jobs_list">
         <p className="description">
           Below you can see list of jobs created by you with details.
         </p>
         {this.props.tasks.map(function(job, id) {
           return (
-            <div key={id} className="task">
+            <div key={id} className="job">
               <p>Name: {job.name}</p>
-              <p>Description: {job.description}</p>
-              <p>Job type: {job.type}</p>
-              <p>Job input: {job.input}</p>
-              <p>Divide url: {job.divide_server_url}</p>
-              <p>Progress: {job.progress}</p>
+              <p>Division type: {job.division_type}</p>
+              <p>Aggregation type: {job.aggregation_type}</p>
+              <details className="job-extra-info">
+                <summary>See more</summary>
+                <p>Description: {job.description}</p>
+                <p>Input: {job.input}</p>
+                <p>Divide url: {job.divide_server_url}</p>
+                <p>Results randomization: {job.randomized_results}</p>
+                <p>Replication rate: {job.replication_rate}</p>
+                <p style={{ width: job.progress*100 + '%' }} className="job-progress"></p>
+                <p className="job-progress-text">{job.progress}% completed</p>
+                {
+                  job.progress === 1 ? 
+                    <p>Results: {job.results}</p>  :
+                    null
+                }
+              </details>
             </div>
           );
         })}

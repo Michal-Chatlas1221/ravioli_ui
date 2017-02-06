@@ -117,14 +117,14 @@ body {
 		input:focus, select:focus {
 			outline-color: $blue;
 		}
-		.create-task-container {
+		.submit-job-container {
 			padding: 10px;
 			background-color: $lightgray;
 			margin-bottom: 10px;
 			.description {
 				margin: 30px 0;
 			}
-			#create-task {
+			#submit_job {
 				display: table;
 				margin: 0 auto;
 				border-spacing: 10px;
@@ -162,22 +162,39 @@ body {
 				}
 			}
 		}
-		#tasks-list {
+		#jobs_list {
 			padding: 10px;
 			margin: 0 auto 10px auto;
 			display: table;
-			max-width: $desktop-width;
+			width: $desktop-width;
 			.description {
 				margin-bottom: 30px;
 				font-size: 18px;
 			}
-			.task {
+			.job {
 				width: 50%;
 				float: left;
+				.job-progress {
+					height: 8px;
+					border-bottom: 8px solid $blue;
+					border-radius: 4px;
+					margin-bottom: 6px;
+				}
+				.job-progress-text {
+					text-align: center;
+					margin-top: 6px;
+				}
+				summary {
+					font-weight: 600;
+					margin-bottom: 16px;
+					&:focus {
+						outline-color: $blue;
+					}
+				}
 			}
-			div.task {
+			div.job {
 				background-color: $lightgray;
-				padding: 5px;
+				padding: 0 10px;
 			}
 			div:nth-child(4n) {
 				background-color: #fff;
