@@ -8,7 +8,7 @@ export default class Header extends React.Component {
 		return (
 			<header id="header">
         <div className="content">
-          <h1>Ravioli</h1>
+          <h1>Povocop</h1>
             <div className="header-right">
             {	
               this.props.auth.currentUser ?
